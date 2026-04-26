@@ -20,7 +20,6 @@ public class StudentController {
 
     @PostMapping("/create")
     public Student createStudent(@RequestBody Student student){
-        // В реальности здесь было бы сохранение в репозиторий: repository.save(student)
         if (student.getId() == null) {
             student.setId(UUID.randomUUID());
         }
